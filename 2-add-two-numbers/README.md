@@ -1,4 +1,4 @@
-
+<h2>Solution image</h2>
 <img alt="" src="/Users/mohamedabdullahi/Downloads/LeetcodeRepo/2-add-two-numbers/Untitled-2022-05-25-1307.png" style="width: 483px; height: 342px;">
 <h2><a href="https://leetcode.com/problems/add-two-numbers/">2. Add Two Numbers</a></h2><h3>Medium</h3><hr><div><p>You are given two <strong>non-empty</strong> linked lists representing two non-negative integers. The digits are stored in <strong>reverse order</strong>, and each of their nodes contains a single digit. Add the two numbers and return the sum&nbsp;as a linked list.</p>
 
