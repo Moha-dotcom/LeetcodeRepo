@@ -11,33 +11,39 @@
 class Solution {
     public boolean isPalindrome(ListNode head) {
      
-        ListNode curr = head;
-        boolean isTrueOrFalse = true;
-        Stack<Integer> stack = new Stack<>();
         
+        int length = 0; 
+        ListNode temp = head;
         
-        
-        while(curr != null){
-            stack.push(curr.val);
-            curr = curr.next;
+        while(temp != null){
+            temp = temp.next;
+            length++;
         }
         
-        while(head != null){
-            int i = stack.pop();
-            
-            if(head.val == i){
-                isTrueOrFalse = true;
-               
-            }else{
-                isTrueOrFalse = false;
-                break;
-            }
-            
-            head = head.next;
-            
+        // Construct an new Array with half the List
+        int newArr [] = new int[length/2];
+        int i = 0;
+        temp = head;
+        
+        // Store half of the List in the newArr
+        while(i < length/2){
+            newArr[i] = temp.val;
+            temp = temp.next;
+            i++;
+        }
+         //if odd number of elements, no need to compare the middle element
+        if(length % 2 != 0) temp = temp.next;
+        i--;
+        
+          //compare the second half of list element by element
+        
+        while(temp != null){
+            if(newArr[i] != temp.val) return false;
+            temp = temp.next;
+            i--;
         }
         
-        return isTrueOrFalse;
+        return true;
         
         
     }
